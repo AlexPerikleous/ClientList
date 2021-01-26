@@ -12,6 +12,7 @@ namespace ClientList.Entities
         public int PhoneNumberId { get; set; }
         
         public PhoneNumberType PhoneNumberType { get; set; }
+
         [Required, MaxLength(15), MinLength(8)]
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }

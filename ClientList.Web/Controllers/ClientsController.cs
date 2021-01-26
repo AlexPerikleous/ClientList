@@ -41,17 +41,6 @@ namespace ClientList.Web.Controllers
         // GET: Clients/Create
         public ActionResult Create()
         {
-            //PhoneNumber p1 = new PhoneNumber() { PhoneNumberType = PhoneNumberType.Home };
-            //PhoneNumber p2 = new PhoneNumber() { PhoneNumberType = PhoneNumberType.Mobile };
-            //PhoneNumber p3 = new PhoneNumber() { PhoneNumberType = PhoneNumberType.Office };
-            //ViewBag.PhoneNumbers = new List<PhoneNumber>() { p1, p2, p3 };
-            //ClientPhoneViewModel clientPhoneViewModel = new ClientPhoneViewModel();
-            //clientPhoneViewModel.HomeNumber = new PhoneNumber();
-            //clientPhoneViewModel.HomeNumber.PhoneNumberType = PhoneNumberType.Home;
-            //clientPhoneViewModel.MobileNumber = new PhoneNumber();
-            //clientPhoneViewModel.MobileNumber.PhoneNumberType = PhoneNumberType.Mobile;
-            //clientPhoneViewModel.OfficeNumber = new PhoneNumber();
-            //clientPhoneViewModel.OfficeNumber.PhoneNumberType = PhoneNumberType.Office;
             return View(new ClientPhoneViewModel());
         }
 
@@ -60,7 +49,6 @@ namespace ClientList.Web.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "ClientId,FirstName,LastName,Address,Email")] Client client)
         public ActionResult Create(ClientPhoneViewModel clientPhoneViewModel)
         {
             if (ModelState.IsValid)
@@ -128,27 +116,6 @@ namespace ClientList.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                //var client = new Client();
-                //client.FirstName = clientPhoneViewModel.FirstName;
-                //client.LastName = clientPhoneViewModel.LastName;
-                //client.Address = clientPhoneViewModel.Address;
-                //client.Email = clientPhoneViewModel.Email;
-                //if (clientPhoneViewModel.HomeNumber != null)
-                //{
-                //    client.PhoneNumbers.Add(clientPhoneViewModel.HomeNumber);
-                //}
-                //if (clientPhoneViewModel.MobileNumber != null)
-                //{
-                //    client.PhoneNumbers.Add(clientPhoneViewModel.MobileNumber);
-                //}
-                //if (clientPhoneViewModel.OfficeNumber != null)
-                //{
-                //    client.PhoneNumbers.Add(clientPhoneViewModel.OfficeNumber);
-                //}
-                //var client =
-                //from clients in db.Clients
-                //where clients.ClientId == clientPhoneViewModel.ClientId
-                //select clients;
                 PhoneRepository phoneRepository = new PhoneRepository();
                 Client client = db.Clients.Find(clientPhoneViewModel.ClientId);
                 client.FirstName = clientPhoneViewModel.FirstName;
@@ -190,31 +157,6 @@ namespace ClientList.Web.Controllers
                     client.PhoneNumbers.Add(clientPhoneViewModel.OfficeNumber);
                 }
 
-
-                //if (!client.PhoneNumbers.Contains(clientPhoneViewModel.HomeNumber))
-                //{
-                //    clientPhoneViewModel.HomeNumber.PhoneNumberType = PhoneNumberType.Home;
-                //    client.PhoneNumbers.Add(clientPhoneViewModel.HomeNumber);
-                //}
-                //if (!client.PhoneNumbers.Contains(clientPhoneViewModel.MobileNumber))
-                //{
-                //    clientPhoneViewModel.MobileNumber.PhoneNumberType = PhoneNumberType.Mobile;
-                //    client.PhoneNumbers.Add(clientPhoneViewModel.MobileNumber);
-                //}
-                //if (!client.PhoneNumbers.Contains(clientPhoneViewModel.OfficeNumber))
-                //{
-                //    clientPhoneViewModel.OfficeNumber.PhoneNumberType = PhoneNumberType.Office;
-                //    client.PhoneNumbers.Add(clientPhoneViewModel.OfficeNumber);
-                //}
-
-                //PhoneNumber homeNumber = phoneRepository.GetByClientIdAndType(clientPhoneViewModel.ClientId, PhoneNumberType.Home);
-                //PhoneNumber mobileNumber = phoneRepository.GetByClientIdAndType(clientPhoneViewModel.ClientId, PhoneNumberType.Mobile);
-                //PhoneNumber officeNumber = phoneRepository.GetByClientIdAndType(clientPhoneViewModel.ClientId, PhoneNumberType.Office);
-                //if (homeNumber != null)
-                //{
-                //    homeNumber.Phone = clientPhoneViewModel.HomeNumber.Phone;
-                //}
-                //homeNumber.Phone = client
                 db.Entry(client).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
-    <Compile Include="Custom_Validations\MyValidationMethods.cs" />
     <Compile Include="PhoneNumber.cs" />
     <Compile Include="PhoneNumberType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
