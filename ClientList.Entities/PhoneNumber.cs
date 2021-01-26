@@ -11,26 +11,13 @@ namespace ClientList.Entities
     {
         public int PhoneNumberId { get; set; }
         
-        
         public PhoneNumberType PhoneNumberType { get; set; }
         [Required, MaxLength(15), MinLength(8)]
-        [Display(Name = "Phone Number")]
+        [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
-
-
-
-        //[Required, MaxLength(60), MinLength(2)]
-        //[Display(Name = "First Name")]
-        //public string HomeNumber { get; set; }
-        //[Required, MaxLength(60), MinLength(2)]
-        //[Display(Name = "First Name")]
-        //public string OfficeNumber { get; set; }
-        //[Required, MaxLength(60), MinLength(2)]
-        //[Display(Name = "First Name")]
-        //public string MobileNumber { get; set; }
 
     }
 }
