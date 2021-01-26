@@ -1,0 +1,11 @@
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\ClientList.Entities.dll.config
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\ClientList.Entities.dll
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\ClientList.Entities.pdb
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\EntityFramework.dll
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\EntityFramework.xml
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\obj\Debug\ClientList.Entities.csprojAssemblyReference.cache
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\obj\Debug\ClientList.Entities.csproj.CopyComplete
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\obj\Debug\ClientList.Entities.dll
+C:\Users\alex\source\repos\ClientList\ClientList.Entities\obj\Debug\ClientList.Entities.pdb
